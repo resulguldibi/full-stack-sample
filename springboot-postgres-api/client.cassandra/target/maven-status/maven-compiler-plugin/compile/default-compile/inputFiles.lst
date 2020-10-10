@@ -1,0 +1,17 @@
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\interfaces\ICassandraCluster.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\CassandraSession.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\interfaces\ICassandraClientProvider.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\CassandraConnectionInfo.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\interfaces\ICassandraClient.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\interfaces\ICassandraClusterProvider.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\providers\CassandraSessionProvider.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\providers\CassandraClientProvider.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\providers\CassandraConnectionInfoProvider.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\providers\CassandraClusterProvider.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\interfaces\ICassandraConnectionInfo.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\CassandraClient.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\interfaces\ICassandraSessionProvider.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\CassandraCluster.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\ClusterSettings.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\interfaces\ICassandraSession.java
+C:\Users\resul\source\repos\full-stack-sample\springboot-postgres-api\client.cassandra\src\main\java\com\resulguldibi\client\cassandra\interfaces\ICassandraConnectionInfoProvider.java

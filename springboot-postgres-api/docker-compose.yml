@@ -1,0 +1,34 @@
+version: "3"
+services:
+  postgres:
+    image: "postgres:11"
+    container_name: "postgres"
+    ports:
+      - "5432:5432"
+    volumes:
+      - my_dbdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: pwd123
+      POSTGRES_USER: postgresuser
+  cassandra:
+    image: cassandra
+    container_name: cassandra
+    restart: always     
+    ports:
+      - 9042:9042
+    environment:
+      CASSANDRA_CLUSTER_NAME: my_cluster
+      CASSANDRA_ENDPOINT_SNITCH: GossipingPropertyFileSnitch
+      CASSANDRA_DC: my_datacenter  
+  postgres-api:
+    image: resulguldibi/postgres-api
+    container_name: postgres-api
+    restart: always
+    depends_on:
+      - cassandra
+    links:
+      - cassandra  
+    ports:
+      - 8080:8080
+volumes:
+  my_dbdata:
