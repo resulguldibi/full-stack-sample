@@ -24,6 +24,7 @@ MANIFEST.MF
 _site/
 activemq-data
 bin
+obj
 build
 !/**/src/**/bin
 !/**/src/**/build
@@ -41,3 +42,8 @@ transaction-logs
 secrets.yml
 .gradletasknamecache
 .sts4-cache
+TODO.txt
+*/vendor
+go-service/vendor/*
+netcore-api/netcore-api/bin
+netcore-api/netcore-api/obj
