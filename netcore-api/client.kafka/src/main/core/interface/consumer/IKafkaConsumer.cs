@@ -1,6 +1,5 @@
 ﻿using Confluent.Kafka;
 using System;
-using System.Collections.Generic;
 using System.Threading;
 
 namespace client.kafka.consumer.core
@@ -14,6 +13,8 @@ namespace client.kafka.consumer.core
         ConsumeResult<TKey, TValue> Consume(int millisecondsTimeout);
 
         void Subscribe();
+
+        void Assign(string topic, int partition);
         void Close();
     }
 }

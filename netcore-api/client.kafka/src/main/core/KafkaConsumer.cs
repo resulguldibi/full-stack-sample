@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Linq;
 
 namespace client.kafka.consumer.core
 {
@@ -14,6 +15,8 @@ namespace client.kafka.consumer.core
             this.consumer = consumer;
             this.topics = topics;
         }
+
+        
 
         public void Close()
         {
@@ -43,6 +46,26 @@ namespace client.kafka.consumer.core
         public void Subscribe()
         {
             this.consumer.Subscribe(this.topics);
+        }
+
+        public void Assign(string topic, int partition)
+        {
+            if(topic == null || topic.Equals(string.Empty))
+            {
+                throw new ArgumentNullException("topic", "topic is null or empty");
+            }
+
+            if(partition < 0)
+            {
+                throw new ArgumentOutOfRangeException("partition", "partition must be greater than 0.");
+            }
+
+            if (!this.topics.Contains(topic))
+            {
+                throw new ArgumentOutOfRangeException("topic", "topic not in subscribed topic list");
+            }
+
+            this.consumer.Assign(new TopicPartition(topic, new Partition(partition)));
         }
     }
 }

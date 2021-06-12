@@ -14,7 +14,6 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --zookeeper zookeeper:2181 
 docker exec -it cassandra cqlsh -e "CREATE KEYSPACE selections_keyspace WITH replication = {'class' : 'NetworkTopologyStrategy','my_datacenter' : 1};"
 docker exec -it cassandra cqlsh -e "CREATE TABLE selections_keyspace.selections (id text, name text, PRIMARY KEY (id, name));"
 docker exec -it cassandra cqlsh -e "CREATE INDEX on selections_keyspace.selections(name);"
-docker exec -it cassandra cqlsh -e "INSERT INTO selections_keyspace.my_table(id,count,word) VALUES('1',10,'sample');"
 
 #creare database and table in postgres. insert sample record to postgres table
 docker exec -it postgres psql -U postgresuser -c "create database selections_database;"

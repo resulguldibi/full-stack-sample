@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>kafka_api</RootNamespace>
+    <RootNamespace>netcore_api</RootNamespace>
     <UserSecretsId>ab37eb9e-5d78-48c1-955d-550e519fd4c1</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>

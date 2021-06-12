@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using netcore_api.Middlewares;
 
 namespace netcore_api
 {
@@ -30,7 +31,7 @@ namespace netcore_api
             services.AddSingleton<IConsumerConfigProvider, ConsumerConfigProvider>();
 
             //services.AddHostedService<KafkaConsumerHostedService>();
-
+            services.AddCors();
             services.AddControllers();
             services.AddWebSocketManager();
         }
@@ -46,17 +47,19 @@ namespace netcore_api
             var serviceScopeFactory = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>();
             var serviceProvider = serviceScopeFactory.CreateScope().ServiceProvider;
 
+            app.UseCors(b => b.WithOrigins("http://localhost:8081").WithHeaders("Content-Type"));
+
             app.UseWebSockets();
 
-            app.MapWebSocketManager("/ws", serviceProvider.GetService<SampleSocketMessageHandler>());
-
-            app.UseStaticFiles();
+            app.MapWebSocketManager("/ws", serviceProvider.GetService<SampleSocketMessageHandler>());            
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCorsMiddleware();
 
             app.UseEndpoints(endpoints =>
             {

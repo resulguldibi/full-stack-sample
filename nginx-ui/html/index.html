@@ -233,7 +233,7 @@
                     // Send a POST request
                     axios({
                         method: 'post',
-                        url: '../api/selections/async',
+                        url: 'http://localhost:8080/api/selections/async',
                         data: {
                             name: selection,
                             id: uuid,
@@ -255,8 +255,8 @@
 
                     // Send a POST request
                     axios({
-                        method: 'post',
-                        url: '../api/selections/synchronization',
+                        method: 'post',						
+                        url: 'http://localhost:8080/api/selections/synchronization',
                         data: {
                             user_id: userId
                         }
@@ -282,7 +282,7 @@
     </script>
 
     <script language="javascript" type="text/javascript">
-        var uri = "ws://" + window.location.host + "/ws";
+        var uri = "ws://localhost:8080/ws";
 
         function connect() {
             socket = new WebSocket(uri);

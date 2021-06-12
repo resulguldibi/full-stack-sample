@@ -19,6 +19,11 @@
 .settings
 .springBeans
 .vscode
+.vs
+.vs/*
+**/.vs/**
+netcore-api/.vs
+netcore-api/.vs/*
 /code
 MANIFEST.MF
 _site/
@@ -26,6 +31,9 @@ activemq-data
 bin
 obj
 build
+*/bin
+*/obj
+*/.vs
 !/**/src/**/bin
 !/**/src/**/build
 build.log
